@@ -32,6 +32,8 @@ class client extends Controller
         $detail->fax = $request->fax;
         $detail->ville = $request->ville;
         $detail->adress = $request->adress;
+        $detail->poste = $request->poste;
+        $detail->typeinfluencer = $request->typeinfluencer;
         $detail->cp = $request->cp;
         $detail->presentation = $request->presentation;
         $detail->save();
@@ -59,4 +61,18 @@ class client extends Controller
     function profilUserForm() {
         return view('profil_user');
     }
+
+    function index(){
+
+        $DetailsUsers=DetailsUsers::all();
+        return view ('layouts/index',compact('services','user'));
+
+    }
+
+
+    public function viewlogin(){
+        return view('viewlogin');
+    }
+
+
 }

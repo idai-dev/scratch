@@ -22,6 +22,8 @@ class CreateDetailsUsersTable extends Migration
             $table->string('fax')->nullable();
             $table->string('ville')->nullable();
             $table->string('adress')->nullable();
+            $table->string('poste')->nullable();
+            $table->string('typeinfluencer')->nullable();
             $table->integer('cp')->nullable();
             $table->string('presentation')->nullable();
             $table->timestamps();

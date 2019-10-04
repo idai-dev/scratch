@@ -6,13 +6,18 @@ use Illuminate\Http\Request;
 use App\Services;
 use App\Mots;
 use Auth;
+use App\DetailsUsers;
+use App\User;
 
 class ServicesController extends Controller
 {
     function index(){
-        $services = Services::OrderBy('created_at','DESC')->paginate(4);
-        return view('layouts/index')->with('service',$services);
+        $service = Services::OrderBy('created_at','DESC')->paginate(4);
+        $DetailsUser=DetailsUsers::all();
+        return view ('layouts/index',compact('service','DetailsUser'));
+
     }
+
     function viewrecherche(){
         return view('layouts/rechercheview');
     }
@@ -49,57 +54,71 @@ class ServicesController extends Controller
             $mot->id_user = Auth::user()->id;
             $mot->save();
         }
-        
+
         return back()->with('status','Ajout términé avec succées');
     }
 
-    function filtrationServices($prix_min,$prix_max,$titre,$dt,$localisation) {
-    
+    function filtrationServices($prix_min,$prix_max,$titre,$dt,$localisation,$age) {
+
         $filters = [
             'prix_min'    => $prix_min,
-            'prix_max' => $prix_max+1,        
+            'prix_max' => $prix_max,
             'titre'    => $titre,
-            'dt' => $dt,        
+            'dt' => $dt,
             'localisation'    => $localisation,
+            'age'=> $age,
         ];
-     
-      $res = App\Services::where(function ($query) use ($filters) {
+      $res = Services::where(function ($query) use ($filters) {
         if ($filters['prix_min']!='all') {
-            
-            $query->where('salaire_min', '=', $filters['prix_min']);
+
+            $query->where('salaire_min', '>', $filters['prix_min']-1);
         }
-    
+
         if ($filters['prix_max']!='all') {
-                $query->where('salaire_max', '<', $filters['prix_max']);
+                $query->where('salaire_max', '<', $filters['prix_max']+1);
         }
+
         if ($filters['titre']!='all') {
-            return $filters['titre'];
+
                 $query->where('titre', '=', $filters['titre']);
+
         }
-        
+
         if ($filters['dt']!='all') {
-                    $query->where('created_at', 'like', $filters['dt']);
+                    $query->where('created_at', 'like', "%".$filters['dt']."%");
         }
-             
+
         if ($filters['localisation']!='all') {
-            
-            
+
+
                 $query->where('localisation', '=', $filters['localisation']);
+
+
         }
+
+          if ($filters['age']!='all') {
+
+
+              $query->where('age', '=', $filters['age']);
+
+
+          }
         })->get();
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-         
+
+
          return $res;
     }
+
+
+
+    public function ShowDetailService($id){
+$service=Services::where('id',$id)->firstOrfail();
+
+        return view ('ShowDetailService')->with('service',$service);
+
+    }
+
+
+
+
 }

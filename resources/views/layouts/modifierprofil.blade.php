@@ -15,12 +15,12 @@
 	================================================== -->
 	<div class="dashboard-content-container" data-simplebar>
 		<div class="dashboard-content-inner" >
-			
+
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
-        
+
 				<h3>Modifier Profil</h3>
-                
+
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class="dark">
 					<ul>
@@ -29,7 +29,7 @@
 					</ul>
 				</nav>
 			</div>
-	
+
             <!-- Row -->
             @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -37,7 +37,7 @@
                         </div>
                 @endif
 			<div class="row">
-          
+
 				<!-- Dashboard Box -->
 				<div class="col-xl-12">
 					<div class="dashboard-box margin-top-0">
@@ -48,14 +48,14 @@
 						</div>
 
 						<div class="content with-padding padding-bottom-0">
-                        
+
                         <form method="post" action="{{ route('modifierprofilaction') }}" enctype="multipart/form-data">
                         @csrf
                                     <input type="hidden" value="{{$user->id}}" name="id">
 							<div class="row">
 
 								<div class="col">
-								<?php 
+								<?php
 								$user = App\DetailsUsers::where('id_users',Auth::user()->id)->get();
 								foreach ($user as $use){
 									$photo = $use->photo_profil;
@@ -63,7 +63,7 @@
 								?>
                                 <img class="profile-pic" src="{{asset('images')}}/{{$photo}}" alt="photo" width="35%;" />
                                 <input type="file" class="form-control" name="photo_profil"  style="width: 75%;">
-                                
+
 								</div>
 
 								<div class="col">
@@ -72,7 +72,7 @@
 										<div class="col-xl-12">
 											<div class="submit-field">
 												<h5>Nom Utilisateur</h5>
-												
+
 												<input type="text" class="with-border" name="name" value="{{Auth::user()->name}}">
 											</div>
 										</div>
@@ -81,7 +81,7 @@
 											<div class="submit-field">
 												<h5>Email</h5>
 												<input type="text" class="with-border" name="email" value="{{Auth::user()->email}}">
-											
+
 											</div>
 										</div>
 
@@ -125,7 +125,7 @@
 									</div>
 								</div>
 
-								
+
                             </div>
                             <div class="row">
 								<div class="col-xl-4">
@@ -136,33 +136,48 @@
 								</div>
 
 								<div class="col-xl-4">
-									<div class="submit-field">
-										<h5>Adresse</h5>
-										<input type="text" class="with-border"  name="adress" @if ($detail != null) value="{{$detail->adress}}"  @endif">
-									</div>
-								</div>
+                                    <div class="submit-field">
+                                        <h5>Adresse</h5>
+                                        <input type="text" class="with-border"  name="adress" @if ($detail != null) value="{{$detail->adress}}"  @endif">
+                                    </div>
+                                </div>
 
-								<div class="col-xl-4">
-									<div class="submit-field">
-										<h5>Code postal</h5>
-										<input type="text" class="with-border"  name="cp" @if ($detail != null) value="{{$detail->cp}}"  @endif">
-									</div>
-								</div>
+                                <div class="col-xl-4">
+                                    <div class="submit-field">
+                                        <h5>Code postal</h5>
+                                        <input type="text" class="with-border"  name="cp" @if ($detail != null) value="{{$detail->cp}}"  @endif">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                    <div class="submit-field">
+                                        <h5>Poste</h5>
+                                        <input type="text" class="with-border"  name="poste" @if ($detail != null) value="{{$detail->poste}}"  @endif">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                    <div class="submit-field">
+                                        <h5>Type d'influencer</h5>
+                                        <input type="text" class="with-border"  name="typeinfluencer" @if ($detail != null) value="{{$detail->typeinfluencer}}"  @endif">
+                                    </div>
+                                </div>
+
                                 <div class="col-xl-12">
 										<div class="submit-field">
-											<h5>Présentez-vous</h5> 
+											<h5>Présentez-vous</h5>
 											<textarea cols="30" rows="5" class="with-border"  name="presentation" @if ($detail != null) value="{{$detail->presentation}}"  @endif"></textarea>
 										</div>
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Dashboard Box -->
-				
-				
+
+
 				<!-- Button -->
 				<div class="col-xl-12">
 					<input type="submit" class="button ripple-effect big margin-top-30" value="Modifier">
@@ -233,7 +248,7 @@
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>
 // Snackbar for user status switcher
-$('#snackbar-user-status label').click(function() { 
+$('#snackbar-user-status label').click(function() {
 	Snackbar.show({
 		text: 'Your status has been changed!',
 		pos: 'bottom-center',
@@ -242,8 +257,8 @@ $('#snackbar-user-status label').click(function() {
 		duration: 3000,
 		textColor: '#fff',
 		backgroundColor: '#383838'
-	}); 
-}); 
+	});
+});
 </script>
 
 <!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
@@ -299,7 +314,7 @@ $('#snackbar-user-status label').click(function() {
 	            	},
 				}],
 				xAxes: [{
-					scaleLabel: { display: false },  
+					scaleLabel: { display: false },
 					gridLines:  { display: false },
 				}],
 			},
@@ -335,7 +350,7 @@ $('#snackbar-user-status label').click(function() {
 		 var autocomplete = new google.maps.places.Autocomplete(input, options);
 
 		if ($('.submit-field')[0]) {
-		    setTimeout(function(){ 
+		    setTimeout(function(){
 		        $(".pac-container").prependTo("#autocomplete-container");
 		    }, 300);
 		}

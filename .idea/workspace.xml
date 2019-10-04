@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad40ea7-9e56-41d0-b623-3e4c972b40a7" name="Default Changelist" comment="" />
+    <list default="true" id="6ad40ea7-9e56-41d0-b623-3e4c972b40a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/529601_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/533271_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/857523_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Document/9939_github.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ShowDetailService.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/viewlogin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/DetailsUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DetailsUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServicesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_23_124550_create_details_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_23_124550_create_details_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modifierprofil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modifierprofil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +35,9 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="scratch" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -110,11 +132,21 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1R0A84JZ1kplhVZD7Ru9zOSpnEc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\scratch\app\Http\Middleware" />
+      <recent name="C:\xampp\htdocs\scratch\resources\views" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -149,10 +181,31 @@
       <updated>1568793476915</updated>
       <workItem from="1568793478192" duration="8148000" />
       <workItem from="1568812366669" duration="1358000" />
+      <workItem from="1569942865327" duration="617000" />
+      <workItem from="1570000942109" duration="25591000" />
+      <workItem from="1570087615269" duration="20688000" />
+      <workItem from="1570175670661" duration="1465000" />
+      <workItem from="1570181738905" duration="7641000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
