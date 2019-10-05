@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad40ea7-9e56-41d0-b623-3e4c972b40a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/529601_download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/533271_download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/857523_download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Document/9939_github.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ShowDetailService.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/viewlogin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DetailsUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DetailsUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServicesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_23_124550_create_details_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_23_124550_create_details_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modifierprofil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modifierprofil.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,6 +169,7 @@
       <workItem from="1570087615269" duration="20688000" />
       <workItem from="1570175670661" duration="1465000" />
       <workItem from="1570181738905" duration="7641000" />
+      <workItem from="1570259870387" duration="596000" />
     </task>
     <servers />
   </component>
